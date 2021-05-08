@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vPool Share-Ride</title>
+      <link rel="shortcut icon" href="C:\Users\spydy\Documents\vPool\WhatsApp Image 2021-05-07 at 12.43.00 PM.jpeg" type="image/x-icon">
+  </head>
+  <style media="screen">
+    #h{
+      position: absolute;
+      left: 90px;
+      top: 10px;
+    }
+    #i{
+      height: 100px;
+      width: 100px;
+    }
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+    h1{
+      font-family: gt-eesti,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            background-color: #EDEDED;
+        }
+        a{
+          text-decoration: none;
+        }
+  </style>
+  <body>
+    <img id="i" src="C:\Users\spydy\Documents\vPool\WhatsApp Image 2021-05-07 at 12.43.00 PM.jpeg" alt="vPool">
+    <h1 id="h">vPool</h1><h3>Share Ride</h3>
+    <script>
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 23.022505, lng: 72.571365};
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <br>
+    <h1>What is your route?</h1>
+    <br>
+    <h3>No Tolls</h3>
+    <a href="C:\Users\spydy\Documents\vPool\l-ride.html"><h3>Go</h3></a>
+  </body>
+</html>
